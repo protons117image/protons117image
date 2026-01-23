@@ -144,79 +144,41 @@ Notre application ne cible pas spécifiquement les enfants de moins de 13 ans.
 AdMob applique automatiquement des règles adaptées si nécessaire.
 </p>
 <br/><br/>
-<table>
-    <tr>
-        <th>Permission Android</th>
-        <th>Pourquoi elle est utilisée</th>
-        <th>Obligatoire ?</th>
-    </tr>
+<section>
+    <h2>Permissions Utilisées par l'Application</h2>
 
-    <tr>
-        <td><b>INTERNET</b></td>
-        <td>Nécessaire pour charger et afficher les publicités AdMob.</td>
-        <td>Oui</td>
-    </tr>
+    <p>L'application utilise uniquement les permissions nécessaires à l'affichage des publicités et au fonctionnement des services Google. Aucune permission sensible (caméra, micro, stockage, localisation, etc.) n’est demandée.</p>
 
-    <tr>
-        <td><b>ACCESS_NETWORK_STATE</b></td>
-        <td>Permet de vérifier si l’appareil est connecté à Internet avant d’afficher une publicité.</td>
-        <td>Oui</td>
-    </tr>
+    <h3>1. Accès Internet</h3>
+    <p><b>INTERNET</b> : Nécessaire pour charger et afficher les publicités AdMob.</p>
 
-    <tr>
-        <td><b>ACCESS_ADSERVICES_AD_ID</b></td>
-        <td>Utilisé par les services Google pour accéder à l’identifiant publicitaire (nouveau système AdServices).</td>
-        <td>Oui (AdMob)</td>
-    </tr>
+    <h3>2. État du réseau</h3>
+    <p><b>ACCESS_NETWORK_STATE</b> : Permet de vérifier si l'appareil est connecté à Internet avant d'afficher une publicité.</p>
 
-    <tr>
-        <td><b>ACCESS_ADSERVICES_ATTRIBUTION</b></td>
-        <td>Permet à Google Ads d’attribuer les performances publicitaires (clics, impressions).</td>
-        <td>Oui (AdMob)</td>
-    </tr>
+    <h3>3. Permissions liées aux services publicitaires Google (AdServices / AdMob)</h3>
+    <ul>
+        <li><b>ACCESS_ADSERVICES_AD_ID</b> : Utilisé pour accéder à l’identifiant publicitaire via le nouveau système AdServices.</li>
+        <li><b>ACCESS_ADSERVICES_ATTRIBUTION</b> : Permet d’attribuer les performances publicitaires (clics, impressions).</li>
+        <li><b>ACCESS_ADSERVICES_TOPICS</b> : Utilisé par l’API Topics pour proposer des publicités basées sur des centres d’intérêt non individuels.</li>
+        <li><b>com.google.android.gms.permission.AD_ID</b> : Ancienne permission pour l’identifiant publicitaire Google.</li>
+    </ul>
 
-    <tr>
-        <td><b>ACCESS_ADSERVICES_TOPICS</b></td>
-        <td>Utilisé par l’API Topics pour proposer des publicités non basées sur le tracking individuel.</td>
-        <td>Oui (AdMob)</td>
-    </tr>
+    <h3>4. Permissions techniques nécessaires aux services Google Play</h3>
+    <ul>
+        <li><b>FOREGROUND_SERVICE</b> : Autorise certains services Google à fonctionner en tâche légère.</li>
+        <li><b>WAKE_LOCK</b> : Empêche l’appareil de se mettre en veille durant certaines opérations techniques.</li>
+    </ul>
 
-    <tr>
-        <td><b>com.google.android.gms.permission.AD_ID</b></td>
-        <td>Permission classique pour l’identifiant publicitaire Google (ancienne version).</td>
-        <td>Oui (AdMob)</td>
-    </tr>
+    <h3>5. Licence Google Play</h3>
+    <p><b>com.android.vending.CHECK_LICENSE</b> : Utilisé pour vérifier que l’application est installée légalement depuis Google Play (optionnel).</p>
 
-    <tr>
-        <td><b>FOREGROUND_SERVICE</b></td>
-        <td>Nécessaire pour que certains services Google Play (notamment pubs et mesures) fonctionnent en tâche légère.</td>
-        <td>Oui (Google Services)</td>
-    </tr>
+    <h3>6. Permission interne de l'application</h3>
+    <p><b>com.protons117.calculatriceturbo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</b> : Permission interne générée automatiquement pour sécuriser les Broadcast Receivers.</p>
 
-    <tr>
-        <td><b>WAKE_LOCK</b></td>
-        <td>Empêche l’appareil de se mettre en veille pendant certaines opérations techniques de Google Play Services.</td>
-        <td>Oui (Google Services)</td>
-    </tr>
+    <h3>7. Aucune autre permission sensible</h3>
+    <p>L’application ne demande aucune autorisation sensible comme l’accès à la caméra, au micro, aux fichiers, à la localisation, aux contacts, aux SMS, etc.</p>
+</section>
 
-    <tr>
-        <td><b>com.android.vending.CHECK_LICENSE</b></td>
-        <td>Utilisé par Google Play pour vérifier l’authenticité de l’installation (protection anti-piratage).</td>
-        <td>Optionnel (automatique avec Play Store)</td>
-    </tr>
-
-    <tr>
-        <td><b>com.protons117.calculatriceturbo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</b></td>
-        <td>Permission interne générée automatiquement pour sécuriser les Broadcast Receivers internes à l’app.</td>
-        <td>Oui (interne)</td>
-    </tr>
-
-    <tr>
-        <td><b>Aucune autre permission sensible</b></td>
-        <td>L'application ne demande pas caméra, micro, stockage, localisation, contacts, SMS, etc.</td>
-
-</tr>
-</table>
 <br/><br/>
 <p>
 7. Modifications de cette politique
